@@ -27,7 +27,7 @@ app.use('/images', express.static('images'));
 
 dotenv.config();
 const PORT = process.env.PORT;
-mongoose.set("strictQuery", false);
+mongoose.set("strictQuery", true);
 const CONNECTION =process.env.MONGODB_CONNECTION;
 mongoose
   .connect(CONNECTION, { useNewUrlParser: true, useUnifiedTopology: true })
